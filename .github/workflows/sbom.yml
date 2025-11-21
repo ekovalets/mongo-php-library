@@ -26,10 +26,10 @@ jobs:
           fetch-depth: 0
 
       - name: Setup PHP environment
-        uses: ./.github/actions/setup-for-sbom
+        uses: ./.github/actions/setup
         with:
           php-version: '8.2'
-          driver-version: '1.19.0'
+          driver-version: '1.21.0'
           working-directory: '.'
 
       - name: Generate/Update composer.lock
@@ -39,7 +39,7 @@ jobs:
           echo "✓ composer.lock generated with resolved versions"
 
       - name: Setup SBOM environment
-        uses: ./.github/actions/setup-for-sbom
+        uses: ./.github/actions/setup-sbom
 
       - name: Run SBOM Generator
         uses: ./.github/actions/auxiliry/sbom-update
