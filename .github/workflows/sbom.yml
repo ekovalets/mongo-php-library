@@ -12,9 +12,7 @@ jobs:
   sbom:
     name: Generate SBOM and Create PR
     runs-on: ubuntu-latest
-    
-    # if: github.event.pull_request.merged == true 
-    
+
     concurrency:
       group: sbom-${{ github.ref }}
       cancel-in-progress: false
