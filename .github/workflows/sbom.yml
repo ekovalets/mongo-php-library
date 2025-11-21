@@ -3,11 +3,12 @@ name: Post-Merge SBOM Update
 on:
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: write
   pull-requests: write
-
+env:
+  PHP_VERSION: "8.2"
+  DRIVER_VERSION: "mongodb/mongo-php-driver@v1.21"
 jobs:
   sbom:
     name: Generate SBOM and Create PR
@@ -28,15 +29,15 @@ jobs:
       - name: Setup PHP environment
         uses: ./.github/actions/setup
         with:
-          php-version: '8.2'
-          driver-version: '1.21.0'
+          php-version: ${{ env.PHP_VERSION }}
+          driver-version: ${{ env.DRIVER_VERSION }}
           working-directory: '.'
 
       - name: Generate/Update composer.lock
         run: |
           echo "Resolving dependencies and generating composer.lock..."
           composer update --lock --no-install --ignore-platform-reqs
-          echo "✓ composer.lock generated with resolved versions"
+          echo "composer.lock generated with resolved versions"
 
       - name: Setup SBOM environment
         uses: ./.github/actions/setup-sbom
@@ -44,7 +45,7 @@ jobs:
       - name: Run SBOM Generator
         uses: ./.github/actions/sbom-update
         with:
-          php-version: '8.2'
+          php-version: ${{ env.PHP_VERSION }}
           working-directory: '.'
           output-file: 'sbom.json'
           output-format: 'json'
