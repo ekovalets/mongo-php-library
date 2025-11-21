@@ -1,85 +1,5645 @@
 {
-    "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
-    "bomFormat": "CycloneDX",
-    "specVersion": "1.5",
-    "serialNumber": "urn:uuid:dc42a43b-4ace-4c42-9a6e-0b9e28fdd100",
-    "version": 1,
-    "metadata": {
-        "timestamp": "2024-05-08T09:51:01Z",
-        "tools": [
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:cd2053a4-d2d4-48d9-8cfe-29af47113fc4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-11-21T02:34:46Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.11.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.11.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.11.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
             {
-                "name": "composer",
-                "version": "2.7.6"
-            },
-            {
-                "vendor": "cyclonedx",
-                "name": "cyclonedx-php-composer",
-                "version": "v5.2.0",
-                "externalReferences": [
-                    {
-                        "type": "distribution",
-                        "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-composer/zipball/f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed",
-                        "comment": "dist reference: f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed"
-                    },
-                    {
-                        "type": "vcs",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-composer.git",
-                        "comment": "source reference: f3a3cdc1a9e34bf1d5748e4279a24569cbf31fed"
-                    },
-                    {
-                        "type": "website",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-composer/#readme",
-                        "comment": "as detected from Composer manifest 'homepage'"
-                    },
-                    {
-                        "type": "issue-tracker",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-composer/issues",
-                        "comment": "as detected from Composer manifest 'support.issues'"
-                    },
-                    {
-                        "type": "vcs",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-composer/",
-                        "comment": "as detected from Composer manifest 'support.source'"
-                    }
-                ]
-            },
-            {
-                "vendor": "cyclonedx",
-                "name": "cyclonedx-library",
-                "version": "v3.3.1",
-                "externalReferences": [
-                    {
-                        "type": "distribution",
-                        "url": "https://api.github.com/repos/CycloneDX/cyclonedx-php-library/zipball/cad0f92b36c85f36b3d3c11ff96002af5f20cd10",
-                        "comment": "dist reference: cad0f92b36c85f36b3d3c11ff96002af5f20cd10"
-                    },
-                    {
-                        "type": "vcs",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-library.git",
-                        "comment": "source reference: cad0f92b36c85f36b3d3c11ff96002af5f20cd10"
-                    },
-                    {
-                        "type": "website",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-library/#readme",
-                        "comment": "as detected from Composer manifest 'homepage'"
-                    },
-                    {
-                        "type": "documentation",
-                        "url": "https://cyclonedx-php-library.readthedocs.io",
-                        "comment": "as detected from Composer manifest 'support.docs'"
-                    },
-                    {
-                        "type": "issue-tracker",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-library/issues",
-                        "comment": "as detected from Composer manifest 'support.issues'"
-                    },
-                    {
-                        "type": "vcs",
-                        "url": "https://github.com/CycloneDX/cyclonedx-php-library/",
-                        "comment": "as detected from Composer manifest 'support.source'"
-                    }
-                ]
+              "name": "OWASP Foundation"
             }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "mongodb",
+      "name": "mongodb",
+      "type": "application",
+      "description": "MongoDB driver library",
+      "purl": "pkg:composer/mongodb/mongodb",
+      "bom-ref": "pkg:composer/mongodb/mongodb"
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "composer"
+      },
+      {
+        "name": "cdx:bom:componentNamespaces",
+        "value": "amphp\\ncomposer\\ndaverandom\\ndealerdirect\\ndnoegel\\ndoctrine\\nfelixfbecker\\nfidry\\nkelunik\\nleague\\nmyclabs\\nnetresearch\\nnikic\\nphar-io\\nphpdocumentor\\nphpstan\\nphpunit\\npsr\\nrector\\nrevolt\\nsebastian\\nslevomat\\nspatie\\nsquizlabs\\nsymfony\\ntheseer\\nvimeo\\nwebmozart"
+      },
+      {
+        "name": "cdx:bom:componentSrcFiles",
+        "value": "composer.lock"
+      }
+    ]
+  },
+  "components": [
+    {
+      "authors": [
+        {
+          "name": "PHP-FIG"
+        }
+      ],
+      "group": "psr",
+      "name": "log",
+      "version": "3.0.2",
+      "description": "Common interface for logging libraries",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/psr/log@3.0.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/php-fig/log.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/psr/log@3.0.2",
+      "tags": [
+        "framework",
+        "log",
+        "logging",
+        "psr",
+        "psr-3"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Psr\\Log\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
         ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Bob Weinand",
+          "email": "bobwei9@hotmail.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        },
+        {
+          "name": "Daniel Lowrey",
+          "email": "rdlowrey@php.net"
+        }
+      ],
+      "group": "amphp",
+      "name": "amp",
+      "version": "v3.1.1",
+      "description": "A non-blocking concurrency framework for PHP applications.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/amp@v3.1.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/amp.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/amp/zipball/fa0ab33a6f47a82929c38d03ca47ebb71086a93f"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/amphp/amp@v3.1.1",
+      "tags": [
+        "async",
+        "asynchronous",
+        "awaitable",
+        "concurrency",
+        "event",
+        "event-loop",
+        "framework",
+        "future",
+        "non-blocking",
+        "promise"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "byte-stream",
+      "version": "v2.1.2",
+      "description": "A stream abstraction to make working with non-blocking I/O simple.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/byte-stream@v2.1.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/byte-stream.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/byte-stream/zipball/55a6bd071aec26fa2a3e002618c20c35e3df1b46"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/byte-stream@v2.1.2",
+      "tags": [
+        "amp",
+        "amphp",
+        "async",
+        "io",
+        "non-blocking",
+        "stream"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\ByteStream\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        },
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Daniel Lowrey",
+          "email": "rdlowrey@php.net"
+        }
+      ],
+      "group": "amphp",
+      "name": "cache",
+      "version": "v2.0.1",
+      "description": "A fiber-aware cache API based on Amp and Revolt.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/cache@v2.0.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/cache.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/cache/zipball/46912e387e6aa94933b61ea1ead9cf7540b7797c"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/cache@v2.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Cache\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "api"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Chris Wright",
+          "email": "addr@daverandom.com"
+        },
+        {
+          "name": "Daniel Lowrey",
+          "email": "rdlowrey@php.net"
+        },
+        {
+          "name": "Bob Weinand",
+          "email": "bobwei9@hotmail.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        },
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "dns",
+      "version": "v2.4.0",
+      "description": "Async DNS resolution for Amp.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/dns@v2.4.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/dns.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/dns/zipball/78eb3db5fc69bf2fc0cb503c4fcba667bc223c71"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/dns@v2.4.0",
+      "tags": [
+        "amp",
+        "amphp",
+        "async",
+        "client",
+        "dns",
+        "resolve"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Dns\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        },
+        {
+          "name": "Stephen Coakley",
+          "email": "me@stephencoakley.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "parallel",
+      "version": "v2.3.2",
+      "description": "Parallel processing component for Amp.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/parallel@v2.3.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/parallel.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/parallel/zipball/321b45ae771d9c33a068186b24117e3cd1c48dce"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/parallel@v2.3.2",
+      "tags": [
+        "async",
+        "asynchronous",
+        "concurrent",
+        "multi-processing",
+        "multi-threading"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Parallel\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "parser",
+      "version": "v1.1.1",
+      "description": "A generator parser to make streaming parsers simple.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/parser@v1.1.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/parser.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/parser/zipball/3cf1f8b32a0171d4b1bed93d25617637a77cded7"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/parser@v1.1.1",
+      "tags": [
+        "async",
+        "non-blocking",
+        "parse",
+        "parser",
+        "stream"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Parser\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "pipeline",
+      "version": "v1.2.3",
+      "description": "Asynchronous iterators and operators.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/pipeline@v1.2.3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/pipeline.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/pipeline/zipball/7b52598c2e9105ebcddf247fc523161581930367"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/pipeline@v1.2.3",
+      "tags": [
+        "amp",
+        "amphp",
+        "async",
+        "io",
+        "iterator",
+        "non-blocking"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Pipeline\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Bob Weinand",
+          "email": "bobwei9@hotmail.com"
+        },
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "process",
+      "version": "v2.0.3",
+      "description": "A fiber-aware process manager based on Amp and Revolt.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/process@v2.0.3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/process.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/process/zipball/52e08c09dec7511d5fbc1fb00d3e4e79fc77d58d"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/process@v2.0.3",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Process\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "serialization",
+      "version": "v1.0.0",
+      "description": "Serialization tools for IPC and data storage in PHP.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/serialization@v1.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/serialization.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/serialization/zipball/693e77b2fb0b266c3c7d622317f881de44ae94a1"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/serialization@v1.0.0",
+      "tags": [
+        "async",
+        "asynchronous",
+        "serialization",
+        "serialize",
+        "tools"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Serialization\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Daniel Lowrey",
+          "email": "rdlowrey@gmail.com"
+        },
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "socket",
+      "version": "v2.3.1",
+      "description": "Non-blocking socket connection / server implementations based on Amp and Revolt.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/socket@v2.3.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/socket.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/socket/zipball/58e0422221825b79681b72c50c47a930be7bf1e1"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/socket@v2.3.1",
+      "tags": [
+        "amp",
+        "async",
+        "encryption",
+        "non-blocking",
+        "socket",
+        "sockets",
+        "tcp",
+        "tls"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Socket\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        },
+        {
+          "name": "Stephen Coakley",
+          "email": "me@stephencoakley.com"
+        }
+      ],
+      "group": "amphp",
+      "name": "sync",
+      "version": "v2.3.0",
+      "description": "Non-blocking synchronization primitives for PHP based on Amp and Revolt.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/amphp/sync@v2.3.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/amphp/sync.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/amphp/sync/zipball/217097b785130d77cfcc58ff583cf26cd1770bf1"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/amphp/sync@v2.3.0",
+      "tags": [
+        "async",
+        "asynchronous",
+        "mutex",
+        "semaphore",
+        "synchronization"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Amp\\Sync\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Jordi Boggiano",
+          "email": "j.boggiano@seld.be"
+        }
+      ],
+      "group": "composer",
+      "name": "pcre",
+      "version": "3.3.2",
+      "description": "PCRE wrapping library that offers type-safe preg_* replacements.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/composer/pcre@3.3.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/composer/pcre.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/composer/pcre/zipball/b2bed4734f0cc156ee1fe9c0da2550420d99a21e"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/composer/pcre@3.3.2",
+      "tags": [
+        "PCRE",
+        "preg",
+        "regex",
+        "regular expression"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Composer\\Pcre\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nils Adermann",
+          "email": "naderman@naderman.de"
+        },
+        {
+          "name": "Jordi Boggiano",
+          "email": "j.boggiano@seld.be"
+        },
+        {
+          "name": "Rob Bast",
+          "email": "rob.bast@gmail.com"
+        }
+      ],
+      "group": "composer",
+      "name": "semver",
+      "version": "3.4.4",
+      "description": "Semver library that offers utilities, version constraint parsing and validation.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/composer/semver@3.4.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/composer/semver.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/composer/semver/zipball/198166618906cb2de69b95d7d47e5fa8aa1b2b95"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/composer/semver@3.4.4",
+      "tags": [
+        "semantic",
+        "semver",
+        "validation",
+        "versioning"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Composer\\Semver\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "John Stevenson",
+          "email": "john-stevenson@blueyonder.co.uk"
+        }
+      ],
+      "group": "composer",
+      "name": "xdebug-handler",
+      "version": "3.0.5",
+      "description": "Restarts a process without Xdebug.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/composer/xdebug-handler@3.0.5",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/composer/xdebug-handler.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6c1925561632e83d60a44492e0b344cf48ab85ef"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/composer/xdebug-handler@3.0.5",
+      "tags": [
+        "Xdebug",
+        "performance"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Composer\\XdebugHandler\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "daverandom",
+      "name": "libdns",
+      "version": "v2.1.0",
+      "description": "DNS protocol implementation written in pure PHP",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/daverandom/libdns@v2.1.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/DaveRandom/LibDNS.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/DaveRandom/LibDNS/zipball/b84c94e8fe6b7ee4aecfe121bfe3b6177d303c8a"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/daverandom/libdns@v2.1.0",
+      "tags": [
+        "dns"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "LibDNS\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Franck Nijhof",
+          "email": "opensource@frenck.dev"
+        },
+        {
+          "name": "Contributors"
+        }
+      ],
+      "group": "dealerdirect",
+      "name": "phpcodesniffer-composer-installer",
+      "version": "v1.2.0",
+      "description": "PHP_CodeSniffer Standards Composer Installer Plugin",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@v1.2.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/PHPCSStandards/composer-installer.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/PHPCSStandards/composer-installer/zipball/845eb62303d2ca9b289ef216356568ccc075ffd1"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@v1.2.0",
+      "tags": [
+        "PHPCodeSniffer",
+        "PHP_CodeSniffer",
+        "code quality",
+        "codesniffer",
+        "composer",
+        "installer",
+        "phpcbf",
+        "phpcs",
+        "plugin",
+        "qa",
+        "quality",
+        "standard",
+        "standards",
+        "style guide",
+        "stylecheck",
+        "tests"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "dnoegel",
+      "name": "php-xdg-base-dir",
+      "version": "v0.1.1",
+      "description": "implementation of xdg base directory specification for php",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/dnoegel/php-xdg-base-dir@v0.1.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/dnoegel/php-xdg-base-dir.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/dnoegel/php-xdg-base-dir/zipball/8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/dnoegel/php-xdg-base-dir@v0.1.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "XdgBaseDir\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Benjamin Eberlei",
+          "email": "kontakt@beberlei.de"
+        },
+        {
+          "name": "Steve Müller",
+          "email": "st.mueller@dzh-online.de"
+        }
+      ],
+      "group": "doctrine",
+      "name": "coding-standard",
+      "version": "12.0.0",
+      "description": "The Doctrine Coding Standard is a set of PHPCS rules applied to all Doctrine projects.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/doctrine/coding-standard@12.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/doctrine/coding-standard.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/doctrine/coding-standard/zipball/1b2b7dc58c68833af481fb9325c25abd40681c79"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/doctrine/coding-standard@12.0.0",
+      "tags": [
+        "checks",
+        "code",
+        "coding",
+        "cs",
+        "dev",
+        "doctrine",
+        "rules",
+        "sniffer",
+        "sniffs",
+        "standard",
+        "style"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "doctrine",
+      "name": "deprecations",
+      "version": "1.1.5",
+      "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/doctrine/deprecations@1.1.5",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/doctrine/deprecations.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/doctrine/deprecations@1.1.5",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Doctrine\\Deprecations\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "logging"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Felix Becker",
+          "email": "felix.b@outlook.com"
+        }
+      ],
+      "group": "felixfbecker",
+      "name": "advanced-json-rpc",
+      "version": "v3.2.1",
+      "description": "A more advanced JSONRPC implementation",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "url": "https://opensource.org/licenses/ISC"
+          }
+        }
+      ],
+      "purl": "pkg:composer/felixfbecker/advanced-json-rpc@v3.2.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/felixfbecker/php-advanced-json-rpc.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/felixfbecker/php-advanced-json-rpc/zipball/b5f37dbff9a8ad360ca341f3240dc1c168b45447"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/felixfbecker/advanced-json-rpc@v3.2.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "AdvancedJsonRpc\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Felix Becker",
+          "email": "felix.b@outlook.com"
+        }
+      ],
+      "group": "felixfbecker",
+      "name": "language-server-protocol",
+      "version": "v1.5.3",
+      "description": "PHP classes for the Language Server Protocol",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "url": "https://opensource.org/licenses/ISC"
+          }
+        }
+      ],
+      "purl": "pkg:composer/felixfbecker/language-server-protocol@v1.5.3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/felixfbecker/php-language-server-protocol.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/felixfbecker/php-language-server-protocol/zipball/a9e113dbc7d849e35b8776da39edaf4313b7b6c9"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/felixfbecker/language-server-protocol@v1.5.3",
+      "tags": [
+        "language",
+        "microsoft",
+        "php",
+        "server"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "LanguageServerProtocol\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Théo FIDRY",
+          "email": "theo.fidry@gmail.com"
+        }
+      ],
+      "group": "fidry",
+      "name": "cpu-core-counter",
+      "version": "1.3.0",
+      "description": "Tiny utility to get the number of CPU cores.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/fidry/cpu-core-counter@1.3.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/theofidry/cpu-core-counter.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/theofidry/cpu-core-counter/zipball/db9508f7b1474469d9d3c53b86f817e344732678"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/fidry/cpu-core-counter@1.3.0",
+      "tags": [
+        "CPU",
+        "core"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Fidry\\CpuCoreCounter\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "kelunik",
+      "name": "certificate",
+      "version": "v1.1.3",
+      "description": "Access certificate details and transform between different formats.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/kelunik/certificate@v1.1.3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/kelunik/certificate.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/kelunik/certificate/zipball/7e00d498c264d5eb4f78c69f41c8bd6719c0199e"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/kelunik/certificate@v1.1.3",
+      "tags": [
+        "DER",
+        "certificate",
+        "certificates",
+        "openssl",
+        "pem",
+        "transform",
+        "x509"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Kelunik\\Certificate\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Ignace Nyamagana Butera",
+          "email": "nyamsprod@gmail.com"
+        }
+      ],
+      "group": "league",
+      "name": "uri",
+      "version": "7.6.0",
+      "description": "URI manipulation library",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/league/uri@7.6.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/thephpleague/uri.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/thephpleague/uri/zipball/f625804987a0a9112d954f9209d91fec52182344"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/league/uri@7.6.0",
+      "tags": [
+        "URN",
+        "data-uri",
+        "file-uri",
+        "ftp",
+        "hostname",
+        "http",
+        "https",
+        "middleware",
+        "parse_str",
+        "parse_url",
+        "psr-7",
+        "query-string",
+        "querystring",
+        "rfc2141",
+        "rfc3986",
+        "rfc3987",
+        "rfc6570",
+        "rfc8141",
+        "uri",
+        "uri-template",
+        "url",
+        "ws"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "League\\Uri\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Ignace Nyamagana Butera",
+          "email": "nyamsprod@gmail.com"
+        }
+      ],
+      "group": "league",
+      "name": "uri-interfaces",
+      "version": "7.6.0",
+      "description": "Common tools for parsing and resolving RFC3987/RFC3986 URI",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/league/uri-interfaces@7.6.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/thephpleague/uri-interfaces.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/ccbfb51c0445298e7e0b7f4481b942f589665368"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/league/uri-interfaces@7.6.0",
+      "tags": [
+        "data-uri",
+        "file-uri",
+        "ftp",
+        "hostname",
+        "http",
+        "https",
+        "parse_str",
+        "parse_url",
+        "psr-7",
+        "query-string",
+        "querystring",
+        "rfc3986",
+        "rfc3987",
+        "rfc6570",
+        "tools",
+        "uri",
+        "url",
+        "ws"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "League\\Uri\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "myclabs",
+      "name": "deep-copy",
+      "version": "1.13.4",
+      "description": "Create deep copies (clones) of your objects",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/myclabs/deep-copy@1.13.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/myclabs/DeepCopy.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/myclabs/deep-copy@1.13.4",
+      "tags": [
+        "clone",
+        "copy",
+        "duplicate",
+        "object",
+        "object graph"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "DeepCopy\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Christian Weiske",
+          "email": "cweiske@cweiske.de"
+        }
+      ],
+      "group": "netresearch",
+      "name": "jsonmapper",
+      "version": "v4.5.0",
+      "description": "Map nested JSON structures onto PHP classes",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "OSL-3.0",
+            "url": "https://opensource.org/licenses/OSL-3.0"
+          }
+        }
+      ],
+      "purl": "pkg:composer/netresearch/jsonmapper@v4.5.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/cweiske/jsonmapper.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/8e76efb98ee8b6afc54687045e1b8dba55ac76e5"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/netresearch/jsonmapper@v4.5.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "JsonMapper"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "json"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Nikita Popov"
+        }
+      ],
+      "group": "nikic",
+      "name": "php-parser",
+      "version": "v5.6.2",
+      "description": "A PHP parser written in PHP",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/nikic/php-parser@v5.6.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/nikic/PHP-Parser.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/3a454ca033b9e06b63282ce19562e892747449bb"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/nikic/php-parser@v5.6.2",
+      "tags": [
+        "parse",
+        "parser",
+        "php"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "PhpParser\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Arne Blankerts",
+          "email": "arne@blankerts.de"
+        },
+        {
+          "name": "Sebastian Heuer",
+          "email": "sebastian@phpeople.de"
+        },
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phar-io",
+      "name": "manifest",
+      "version": "2.0.4",
+      "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phar-io/manifest@2.0.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phar-io/manifest.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phar-io/manifest/zipball/54750ef60c58e43759730615a392c31c80e23176"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phar-io/manifest@2.0.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Arne Blankerts",
+          "email": "arne@blankerts.de"
+        },
+        {
+          "name": "Sebastian Heuer",
+          "email": "sebastian@phpeople.de"
+        },
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phar-io",
+      "name": "version",
+      "version": "3.2.1",
+      "description": "Library for handling version information and constraints",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phar-io/version@3.2.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phar-io/version.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phar-io/version/zipball/4f7fd7836c6f332bb2933569e566a0d6c4cbed74"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phar-io/version@3.2.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Jaap van Otterdijk",
+          "email": "opensource@ijaap.nl"
+        }
+      ],
+      "group": "phpdocumentor",
+      "name": "reflection-common",
+      "version": "2.2.0",
+      "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpdocumentor/reflection-common@2.2.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phpDocumentor/ReflectionCommon.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/1d01c49d4ed62f25aa84a747ad35d5a16924662b"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpdocumentor/reflection-common@2.2.0",
+      "tags": [
+        "FQSEN",
+        "phpDocumentor",
+        "phpdoc",
+        "reflection",
+        "static analysis"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "phpDocumentor\\Reflection\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Mike van Riel",
+          "email": "me@mikevanriel.com"
+        },
+        {
+          "name": "Jaap van Otterdijk",
+          "email": "opensource@ijaap.nl"
+        }
+      ],
+      "group": "phpdocumentor",
+      "name": "reflection-docblock",
+      "version": "5.6.4",
+      "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpdocumentor/reflection-docblock@5.6.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/90a04bcbf03784066f16038e87e23a0a83cee3c2"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpdocumentor/reflection-docblock@5.6.4",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "phpDocumentor\\Reflection\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Mike van Riel",
+          "email": "me@mikevanriel.com"
+        }
+      ],
+      "group": "phpdocumentor",
+      "name": "type-resolver",
+      "version": "1.11.0",
+      "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpdocumentor/type-resolver@1.11.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phpDocumentor/TypeResolver.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/8cbe6100e8971efbf8e2e7da3a202ba83eafd5a3"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpdocumentor/type-resolver@1.11.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "phpDocumentor\\Reflection\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "phpstan",
+      "name": "phpdoc-parser",
+      "version": "2.3.0",
+      "description": "PHPDoc parser with support for nullable, intersection and generic types",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpstan/phpdoc-parser@2.3.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/phpstan/phpdoc-parser.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/1e0cd5370df5dd2e556a36b9c62f62e555870495"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpstan/phpdoc-parser@2.3.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "PHPStan\\PhpDocParser\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "parse"
+      ]
+    },
+    {
+      "group": "phpstan",
+      "name": "phpstan",
+      "version": "2.1.32",
+      "description": "PHPStan - PHP Static Analysis Tool",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpstan/phpstan@2.1.32",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e126cad1e30a99b137b8ed75a85a676450ebb227"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpstan/phpstan@2.1.32",
+      "tags": [
+        "dev",
+        "static analysis"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "php-code-coverage",
+      "version": "10.1.16",
+      "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/php-code-coverage@10.1.16",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/php-code-coverage.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/7e308268858ed6baedc8704a304727d20bc07c77"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpunit/php-code-coverage@10.1.16",
+      "tags": [
+        "coverage",
+        "testing",
+        "xunit"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "php-file-iterator",
+      "version": "4.1.0",
+      "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/php-file-iterator@4.1.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/php-file-iterator.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/a95037b6d9e608ba092da1b23931e537cadc3c3c"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpunit/php-file-iterator@4.1.0",
+      "tags": [
+        "filesystem",
+        "iterator"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "php-invoker",
+      "version": "4.0.0",
+      "description": "Invoke callables with a timeout",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/php-invoker@4.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/php-invoker.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/php-invoker/zipball/f5e568ba02fa5ba0ddd0f618391d5a9ea50b06d7"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpunit/php-invoker@4.0.0",
+      "tags": [
+        "process"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "php-text-template",
+      "version": "3.0.1",
+      "description": "Simple template engine.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/php-text-template@3.0.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/php-text-template.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/0c7b06ff49e3d5072f057eb1fa59258bf287a748"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpunit/php-text-template@3.0.1",
+      "tags": [
+        "template"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "php-timer",
+      "version": "6.0.0",
+      "description": "Utility class for timing",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/php-timer@6.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/php-timer.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/e2a2d67966e740530f4a3343fe2e030ffdc1161d"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/phpunit/php-timer@6.0.0",
+      "tags": [
+        "timer"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "phpunit",
+      "name": "phpunit",
+      "version": "10.5.58",
+      "description": "The PHP Unit Testing framework.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/phpunit/phpunit@10.5.58",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/phpunit.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e24fb46da450d8e6a5788670513c1af1424f16ca"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/phpunit/phpunit@10.5.58",
+      "tags": [
+        "framework",
+        "phpunit",
+        "testing",
+        "xunit"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "PHP-FIG"
+        }
+      ],
+      "group": "psr",
+      "name": "container",
+      "version": "2.0.2",
+      "description": "Common Container Interface (PHP FIG PSR-11)",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/psr/container@2.0.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/php-fig/container.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/psr/container@2.0.2",
+      "tags": [
+        "PSR-11",
+        "container",
+        "container-interface",
+        "container-interop",
+        "framework",
+        "psr"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Psr\\Container\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "PHP-FIG"
+        }
+      ],
+      "group": "psr",
+      "name": "http-factory",
+      "version": "1.1.0",
+      "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/psr/http-factory@1.1.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/php-fig/http-factory.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/psr/http-factory@1.1.0",
+      "tags": [
+        "factory",
+        "framework",
+        "http",
+        "message",
+        "psr",
+        "psr-17",
+        "psr-7",
+        "request",
+        "response"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Psr\\Http\\Message\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "PHP-FIG"
+        }
+      ],
+      "group": "psr",
+      "name": "http-message",
+      "version": "2.0",
+      "description": "Common interface for HTTP messages",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/psr/http-message@2.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/php-fig/http-message.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/psr/http-message@2.0",
+      "tags": [
+        "framework",
+        "http",
+        "http-message",
+        "psr",
+        "psr-7",
+        "request",
+        "response"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Psr\\Http\\Message\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "rector",
+      "name": "rector",
+      "version": "2.2.8",
+      "description": "Instant Upgrade and Automated Refactoring of any PHP code",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/rector/rector@2.2.8",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/rectorphp/rector.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/rectorphp/rector/zipball/303aa811649ccd1d32e51e62d5c85949d01b5f1b"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/rector/rector@2.2.8",
+      "tags": [
+        "automation",
+        "dev",
+        "migration",
+        "refactoring"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Aaron Piotrowski",
+          "email": "aaron@trowski.com"
+        },
+        {
+          "name": "Cees-Jan Kiewiet",
+          "email": "ceesjank@gmail.com"
+        },
+        {
+          "name": "Christian Lück",
+          "email": "christian@clue.engineering"
+        },
+        {
+          "name": "Niklas Keller",
+          "email": "me@kelunik.com"
+        }
+      ],
+      "group": "revolt",
+      "name": "event-loop",
+      "version": "v1.0.7",
+      "description": "Rock-solid event loop for concurrent PHP applications.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/revolt/event-loop@v1.0.7",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/revoltphp/event-loop.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/09bf1bf7f7f574453efe43044b06fafe12216eb3"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/revolt/event-loop@v1.0.7",
+      "tags": [
+        "async",
+        "asynchronous",
+        "concurrency",
+        "event",
+        "event-loop",
+        "non-blocking",
+        "scheduler"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Revolt\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "cli-parser",
+      "version": "2.0.1",
+      "description": "Library for parsing CLI options",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/cli-parser@2.0.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/cli-parser.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/cli-parser/zipball/c34583b87e7b7a8055bf6c450c2c77ce32a24084"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/cli-parser@2.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "cli",
+        "parse"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "code-unit",
+      "version": "2.0.0",
+      "description": "Collection of value objects that represent the PHP code units",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/code-unit@2.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/code-unit.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/a81fee9eef0b7a76af11d121767abc44c104e503"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/code-unit@2.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "code-unit-reverse-lookup",
+      "version": "3.0.0",
+      "description": "Looks up which function or method a line of code belongs to",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/code-unit-reverse-lookup@3.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/code-unit-reverse-lookup.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/code-unit-reverse-lookup/zipball/5e3a687f7d8ae33fb362c5c0743794bbb2420a1d"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/code-unit-reverse-lookup@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        },
+        {
+          "name": "Jeff Welch",
+          "email": "whatthejeff@gmail.com"
+        },
+        {
+          "name": "Volker Dusch",
+          "email": "github@wallbash.com"
+        },
+        {
+          "name": "Bernhard Schussek",
+          "email": "bschussek@2bepublished.at"
+        }
+      ],
+      "group": "sebastian",
+      "name": "comparator",
+      "version": "5.0.4",
+      "description": "Provides the functionality to compare PHP values for equality",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/comparator@5.0.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/comparator.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/e8e53097718d2b53cfb2aa859b06a41abf58c62e"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/comparator@5.0.4",
+      "tags": [
+        "comparator",
+        "compare",
+        "equality"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "complexity",
+      "version": "3.2.0",
+      "description": "Library for calculating the complexity of PHP code units",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/complexity@3.2.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/complexity.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/complexity/zipball/68ff824baeae169ec9f2137158ee529584553799"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/complexity@3.2.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        },
+        {
+          "name": "Kore Nordmann",
+          "email": "mail@kore-nordmann.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "diff",
+      "version": "5.1.1",
+      "description": "Diff implementation",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/diff@5.1.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/diff.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/c41e007b4b62af48218231d6c2275e4c9b975b2e"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/diff@5.1.1",
+      "tags": [
+        "diff",
+        "udiff",
+        "unidiff",
+        "unified diff"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "environment",
+      "version": "6.1.0",
+      "description": "Provides functionality to handle HHVM/PHP environments",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/environment@6.1.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/environment.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/8074dbcd93529b357029f5cc5058fd3e43666984"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/environment@6.1.0",
+      "tags": [
+        "Xdebug",
+        "environment",
+        "hhvm"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        },
+        {
+          "name": "Jeff Welch",
+          "email": "whatthejeff@gmail.com"
+        },
+        {
+          "name": "Volker Dusch",
+          "email": "github@wallbash.com"
+        },
+        {
+          "name": "Adam Harvey",
+          "email": "aharvey@php.net"
+        },
+        {
+          "name": "Bernhard Schussek",
+          "email": "bschussek@gmail.com"
+        }
+      ],
+      "group": "sebastian",
+      "name": "exporter",
+      "version": "5.1.4",
+      "description": "Provides the functionality to export PHP variables for visualization",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/exporter@5.1.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/exporter.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/0735b90f4da94969541dac1da743446e276defa6"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/exporter@5.1.4",
+      "tags": [
+        "export",
+        "exporter"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "global-state",
+      "version": "6.0.2",
+      "description": "Snapshotting of global state",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/global-state@6.0.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/global-state.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/987bafff24ecc4c9ac418cab1145b96dd6e9cbd9"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/global-state@6.0.2",
+      "tags": [
+        "global state"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "lines-of-code",
+      "version": "2.0.2",
+      "description": "Library for counting the lines of code in PHP source code",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/lines-of-code@2.0.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/lines-of-code.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/lines-of-code/zipball/856e7f6a75a84e339195d48c556f23be2ebf75d0"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/lines-of-code@2.0.2",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "object-enumerator",
+      "version": "5.0.0",
+      "description": "Traverses array structures and object graphs to enumerate all referenced objects",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/object-enumerator@5.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/object-enumerator.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/object-enumerator/zipball/202d0e344a580d7f7d04b3fafce6933e59dae906"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/object-enumerator@5.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "object-reflector",
+      "version": "3.0.0",
+      "description": "Allows reflection of object attributes, including inherited and non-public ones",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/object-reflector@3.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/object-reflector.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/object-reflector/zipball/24ed13d98130f0e7122df55d06c5c4942a577957"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/object-reflector@3.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        },
+        {
+          "name": "Jeff Welch",
+          "email": "whatthejeff@gmail.com"
+        },
+        {
+          "name": "Adam Harvey",
+          "email": "aharvey@php.net"
+        }
+      ],
+      "group": "sebastian",
+      "name": "recursion-context",
+      "version": "5.0.1",
+      "description": "Provides functionality to recursively process PHP variables",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/recursion-context@5.0.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/recursion-context.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/47e34210757a2f37a97dcd207d032e1b01e64c7a"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/recursion-context@5.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "type",
+      "version": "4.0.0",
+      "description": "Collection of value objects that represent the types of the PHP type system",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/type@4.0.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/type.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/462699a16464c3944eefc02ebdd77882bd3925bf"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/type@4.0.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Sebastian Bergmann",
+          "email": "sebastian@phpunit.de"
+        }
+      ],
+      "group": "sebastian",
+      "name": "version",
+      "version": "4.0.1",
+      "description": "Library that helps with managing the version number of Git-hosted PHP projects",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/sebastian/version@4.0.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/sebastianbergmann/version.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/c51fa83a5d8f43f1402e3f32a005e6262244ef17"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/sebastian/version@4.0.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "group": "slevomat",
+      "name": "coding-standard",
+      "version": "8.22.1",
+      "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/slevomat/coding-standard@8.22.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/slevomat/coding-standard.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/1dd80bf3b93692bedb21a6623c496887fad05fec"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/slevomat/coding-standard@8.22.1",
+      "tags": [
+        "dev",
+        "phpcs"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "SlevomatCodingStandard\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Freek Van der Herten",
+          "email": "freek@spatie.be"
+        }
+      ],
+      "group": "spatie",
+      "name": "array-to-xml",
+      "version": "3.4.1",
+      "description": "Convert an array to xml",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/spatie/array-to-xml@3.4.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/spatie/array-to-xml.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/6a740f39415aee8886aea10333403adc77d50791"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/spatie/array-to-xml@3.4.1",
+      "tags": [
+        "array",
+        "convert",
+        "xml"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Spatie\\ArrayToXml\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Greg Sherwood"
+        },
+        {
+          "name": "Juliette Reinders Folmer"
+        },
+        {
+          "name": "Contributors"
+        }
+      ],
+      "group": "squizlabs",
+      "name": "php_codesniffer",
+      "version": "3.13.5",
+      "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/squizlabs/php_codesniffer@3.13.5",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/0ca86845ce43291e8f5692c7356fccf3bcf02bf4"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/squizlabs/php_codesniffer@3.13.5",
+      "tags": [
+        "phpcs",
+        "standards",
+        "static analysis"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Fabien Potencier",
+          "email": "fabien@symfony.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "console",
+      "version": "v7.3.6",
+      "description": "Eases the creation of beautiful and testable command line interfaces",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/console@v7.3.6",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/console.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/console/zipball/c28ad91448f86c5f6d9d2c70f0cf68bf135f252a"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/console@v7.3.6",
+      "tags": [
+        "cli",
+        "command-line",
+        "console",
+        "framework",
+        "terminal"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Component\\Console\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "deprecation-contracts",
+      "version": "v3.6.0",
+      "description": "A generic function and convention to trigger deprecation notices",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/deprecation-contracts@v3.6.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/deprecation-contracts.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/deprecation-contracts@v3.6.0",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Fabien Potencier",
+          "email": "fabien@symfony.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "filesystem",
+      "version": "v7.3.6",
+      "description": "Provides basic utilities for the filesystem",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/filesystem@v7.3.6",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/filesystem.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/filesystem/zipball/e9bcfd7837928ab656276fe00464092cc9e1826a"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/filesystem@v7.3.6",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Component\\Filesystem\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "framework"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Gert de Pagter",
+          "email": "BackEndTea@gmail.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "polyfill-ctype",
+      "version": "v1.33.0",
+      "description": "Symfony polyfill for ctype functions",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/polyfill-ctype@v1.33.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/polyfill-ctype.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/polyfill-ctype@v1.33.0",
+      "tags": [
+        "compatibility",
+        "ctype",
+        "framework",
+        "polyfill",
+        "portable"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Polyfill\\Ctype\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "polyfill-intl-grapheme",
+      "version": "v1.33.0",
+      "description": "Symfony polyfill for intl's grapheme_* functions",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/polyfill-intl-grapheme@v1.33.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/polyfill-intl-grapheme.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/380872130d3a5dd3ace2f4010d95125fde5d5c70"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/polyfill-intl-grapheme@v1.33.0",
+      "tags": [
+        "compatibility",
+        "framework",
+        "grapheme",
+        "intl",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Polyfill\\Intl\\Grapheme\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "polyfill-intl-normalizer",
+      "version": "v1.33.0",
+      "description": "Symfony polyfill for intl's Normalizer class and related functions",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/polyfill-intl-normalizer@v1.33.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/polyfill-intl-normalizer.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/3833d7255cc303546435cb650316bff708a1c75c"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/polyfill-intl-normalizer@v1.33.0",
+      "tags": [
+        "compatibility",
+        "framework",
+        "intl",
+        "normalizer",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Polyfill\\Intl\\Normalizer\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "polyfill-mbstring",
+      "version": "v1.33.0",
+      "description": "Symfony polyfill for the Mbstring extension",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/polyfill-mbstring@v1.33.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/polyfill-mbstring.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/polyfill-mbstring@v1.33.0",
+      "tags": [
+        "compatibility",
+        "framework",
+        "mbstring",
+        "polyfill",
+        "portable",
+        "shim"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Polyfill\\Mbstring\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "service-contracts",
+      "version": "v3.6.1",
+      "description": "Generic abstractions related to writing services",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/service-contracts@v3.6.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/service-contracts.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/service-contracts/zipball/45112560a3ba2d715666a509a0bc9521d10b6c43"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/service-contracts@v3.6.1",
+      "tags": [
+        "abstractions",
+        "contracts",
+        "decoupling",
+        "framework",
+        "interfaces",
+        "interoperability",
+        "standards"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Contracts\\Service\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Nicolas Grekas",
+          "email": "p@tchwork.com"
+        },
+        {
+          "name": "Symfony Community"
+        }
+      ],
+      "group": "symfony",
+      "name": "string",
+      "version": "v7.3.4",
+      "description": "Provides an object-oriented API to strings and deals with bytes, UTF-8 code points and grapheme clusters in a unified way",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/symfony/string@v7.3.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/symfony/string.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/symfony/string/zipball/f96476035142921000338bad71e5247fbc138872"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:composer/symfony/string@v7.3.4",
+      "tags": [
+        "api",
+        "framework",
+        "grapheme",
+        "i18n",
+        "string",
+        "unicode",
+        "utf-8",
+        "utf8"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Symfony\\Component\\String\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Arne Blankerts",
+          "email": "arne@blankerts.de"
+        }
+      ],
+      "group": "theseer",
+      "name": "tokenizer",
+      "version": "1.3.1",
+      "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:composer/theseer/tokenizer@1.3.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/theseer/tokenizer.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/theseer/tokenizer/zipball/b7489ce515e168639d17feec34b8847c326b0b3c"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/theseer/tokenizer@1.3.1",
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      },
+      "tags": [
+        "xml"
+      ]
+    },
+    {
+      "authors": [
+        {
+          "name": "Matthew Brown"
+        },
+        {
+          "name": "Daniil Gentili",
+          "email": "daniil@daniil.it"
+        }
+      ],
+      "group": "vimeo",
+      "name": "psalm",
+      "version": "6.5.1",
+      "description": "A static analysis tool for finding errors in PHP applications",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/vimeo/psalm@6.5.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/vimeo/psalm.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/vimeo/psalm/zipball/3f17a6b24a2dbe543e21408c2b19108cf6a355ef"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/vimeo/psalm@6.5.1",
+      "tags": [
+        "code",
+        "inspection",
+        "php",
+        "static analysis"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Psalm\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
+    },
+    {
+      "authors": [
+        {
+          "name": "Bernhard Schussek",
+          "email": "bschussek@gmail.com"
+        }
+      ],
+      "group": "webmozart",
+      "name": "assert",
+      "version": "1.12.1",
+      "description": "Assertions to validate method input/output with nice error messages.",
+      "scope": "optional",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:composer/webmozart/assert@1.12.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/webmozarts/assert.git"
+        },
+        {
+          "type": "distribution",
+          "url": "https://api.github.com/repos/webmozarts/assert/zipball/9be6926d8b485f55b9229203f962b51ed377ba68"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:composer/webmozart/assert@1.12.1",
+      "tags": [
+        "assert",
+        "check",
+        "validate"
+      ],
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "composer.lock"
+        },
+        {
+          "name": "Namespaces",
+          "value": "Webmozart\\Assert\\"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "purl",
+            "confidence": 1,
+            "methods": [
+              {
+                "technique": "manifest-analysis",
+                "confidence": 1,
+                "value": "composer.lock"
+              }
+            ],
+            "concludedValue": "composer.lock"
+          }
+        ]
+      }
     }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:composer/mongodb/mongodb",
+      "dependsOn": [
+        "pkg:composer/doctrine/coding-standard@12.0.0",
+        "pkg:composer/phpunit/phpunit@10.5.58",
+        "pkg:composer/psr/log@3.0.2",
+        "pkg:composer/rector/rector@2.2.8",
+        "pkg:composer/squizlabs/php_codesniffer@3.13.5",
+        "pkg:composer/vimeo/psalm@6.5.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/psr/log@3.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/amphp/amp@v3.1.1",
+      "dependsOn": [
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/byte-stream@v2.1.2",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/parser@v1.1.1",
+        "pkg:composer/amphp/pipeline@v1.2.3",
+        "pkg:composer/amphp/serialization@v1.0.0",
+        "pkg:composer/amphp/sync@v2.3.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/cache@v2.0.1",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/serialization@v1.0.0",
+        "pkg:composer/amphp/sync@v2.3.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/dns@v2.4.0",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/byte-stream@v2.1.2",
+        "pkg:composer/amphp/cache@v2.0.1",
+        "pkg:composer/amphp/parser@v1.1.1",
+        "pkg:composer/amphp/process@v2.0.3",
+        "pkg:composer/daverandom/libdns@v2.1.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/parallel@v2.3.2",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/byte-stream@v2.1.2",
+        "pkg:composer/amphp/cache@v2.0.1",
+        "pkg:composer/amphp/parser@v1.1.1",
+        "pkg:composer/amphp/pipeline@v1.2.3",
+        "pkg:composer/amphp/process@v2.0.3",
+        "pkg:composer/amphp/serialization@v1.0.0",
+        "pkg:composer/amphp/socket@v2.3.1",
+        "pkg:composer/amphp/sync@v2.3.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/parser@v1.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/amphp/pipeline@v1.2.3",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/process@v2.0.3",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/byte-stream@v2.1.2",
+        "pkg:composer/amphp/sync@v2.3.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/serialization@v1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/amphp/socket@v2.3.1",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/byte-stream@v2.1.2",
+        "pkg:composer/amphp/dns@v2.4.0",
+        "pkg:composer/kelunik/certificate@v1.1.3",
+        "pkg:composer/league/uri-interfaces@7.6.0",
+        "pkg:composer/league/uri@7.6.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/amphp/sync@v2.3.0",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/pipeline@v1.2.3",
+        "pkg:composer/amphp/serialization@v1.0.0",
+        "pkg:composer/revolt/event-loop@v1.0.7"
+      ]
+    },
+    {
+      "ref": "pkg:composer/composer/pcre@3.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/composer/semver@3.4.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/composer/xdebug-handler@3.0.5",
+      "dependsOn": [
+        "pkg:composer/composer/pcre@3.3.2",
+        "pkg:composer/psr/log@3.0.2"
+      ]
+    },
+    {
+      "ref": "pkg:composer/daverandom/libdns@v2.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@v1.2.0",
+      "dependsOn": [
+        "pkg:composer/squizlabs/php_codesniffer@3.13.5"
+      ]
+    },
+    {
+      "ref": "pkg:composer/dnoegel/php-xdg-base-dir@v0.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/doctrine/coding-standard@12.0.0",
+      "dependsOn": [
+        "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@v1.2.0",
+        "pkg:composer/slevomat/coding-standard@8.22.1",
+        "pkg:composer/squizlabs/php_codesniffer@3.13.5"
+      ]
+    },
+    {
+      "ref": "pkg:composer/doctrine/deprecations@1.1.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/felixfbecker/advanced-json-rpc@v3.2.1",
+      "dependsOn": [
+        "pkg:composer/netresearch/jsonmapper@v4.5.0",
+        "pkg:composer/phpdocumentor/reflection-docblock@5.6.4"
+      ]
+    },
+    {
+      "ref": "pkg:composer/felixfbecker/language-server-protocol@v1.5.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/fidry/cpu-core-counter@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/kelunik/certificate@v1.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/league/uri@7.6.0",
+      "dependsOn": [
+        "pkg:composer/league/uri-interfaces@7.6.0",
+        "pkg:composer/psr/http-factory@1.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/league/uri-interfaces@7.6.0",
+      "dependsOn": [
+        "pkg:composer/psr/http-message@2.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/myclabs/deep-copy@1.13.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/netresearch/jsonmapper@v4.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/nikic/php-parser@v5.6.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phar-io/manifest@2.0.4",
+      "dependsOn": [
+        "pkg:composer/phar-io/version@3.2.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/phar-io/version@3.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpdocumentor/reflection-common@2.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpdocumentor/reflection-docblock@5.6.4",
+      "dependsOn": [
+        "pkg:composer/doctrine/deprecations@1.1.5",
+        "pkg:composer/phpdocumentor/reflection-common@2.2.0",
+        "pkg:composer/phpdocumentor/type-resolver@1.11.0",
+        "pkg:composer/phpstan/phpdoc-parser@2.3.0",
+        "pkg:composer/webmozart/assert@1.12.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/phpdocumentor/type-resolver@1.11.0",
+      "dependsOn": [
+        "pkg:composer/doctrine/deprecations@1.1.5",
+        "pkg:composer/phpdocumentor/reflection-common@2.2.0",
+        "pkg:composer/phpstan/phpdoc-parser@2.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/phpstan/phpdoc-parser@2.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpstan/phpstan@2.1.32",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpunit/php-code-coverage@10.1.16",
+      "dependsOn": [
+        "pkg:composer/nikic/php-parser@v5.6.2",
+        "pkg:composer/phpunit/php-file-iterator@4.1.0",
+        "pkg:composer/phpunit/php-text-template@3.0.1",
+        "pkg:composer/sebastian/code-unit-reverse-lookup@3.0.0",
+        "pkg:composer/sebastian/complexity@3.2.0",
+        "pkg:composer/sebastian/environment@6.1.0",
+        "pkg:composer/sebastian/lines-of-code@2.0.2",
+        "pkg:composer/sebastian/version@4.0.1",
+        "pkg:composer/theseer/tokenizer@1.3.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/phpunit/php-file-iterator@4.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpunit/php-invoker@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpunit/php-text-template@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpunit/php-timer@6.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/phpunit/phpunit@10.5.58",
+      "dependsOn": [
+        "pkg:composer/myclabs/deep-copy@1.13.4",
+        "pkg:composer/phar-io/manifest@2.0.4",
+        "pkg:composer/phar-io/version@3.2.1",
+        "pkg:composer/phpunit/php-code-coverage@10.1.16",
+        "pkg:composer/phpunit/php-file-iterator@4.1.0",
+        "pkg:composer/phpunit/php-invoker@4.0.0",
+        "pkg:composer/phpunit/php-text-template@3.0.1",
+        "pkg:composer/phpunit/php-timer@6.0.0",
+        "pkg:composer/sebastian/cli-parser@2.0.1",
+        "pkg:composer/sebastian/code-unit@2.0.0",
+        "pkg:composer/sebastian/comparator@5.0.4",
+        "pkg:composer/sebastian/diff@5.1.1",
+        "pkg:composer/sebastian/environment@6.1.0",
+        "pkg:composer/sebastian/exporter@5.1.4",
+        "pkg:composer/sebastian/global-state@6.0.2",
+        "pkg:composer/sebastian/object-enumerator@5.0.0",
+        "pkg:composer/sebastian/recursion-context@5.0.1",
+        "pkg:composer/sebastian/type@4.0.0",
+        "pkg:composer/sebastian/version@4.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/psr/container@2.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/psr/http-factory@1.1.0",
+      "dependsOn": [
+        "pkg:composer/psr/http-message@2.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/psr/http-message@2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/rector/rector@2.2.8",
+      "dependsOn": [
+        "pkg:composer/phpstan/phpstan@2.1.32"
+      ]
+    },
+    {
+      "ref": "pkg:composer/revolt/event-loop@v1.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/cli-parser@2.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/code-unit@2.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/code-unit-reverse-lookup@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/comparator@5.0.4",
+      "dependsOn": [
+        "pkg:composer/sebastian/diff@5.1.1",
+        "pkg:composer/sebastian/exporter@5.1.4"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/complexity@3.2.0",
+      "dependsOn": [
+        "pkg:composer/nikic/php-parser@v5.6.2"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/diff@5.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/environment@6.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/exporter@5.1.4",
+      "dependsOn": [
+        "pkg:composer/sebastian/recursion-context@5.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/global-state@6.0.2",
+      "dependsOn": [
+        "pkg:composer/sebastian/object-reflector@3.0.0",
+        "pkg:composer/sebastian/recursion-context@5.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/lines-of-code@2.0.2",
+      "dependsOn": [
+        "pkg:composer/nikic/php-parser@v5.6.2"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/object-enumerator@5.0.0",
+      "dependsOn": [
+        "pkg:composer/sebastian/object-reflector@3.0.0",
+        "pkg:composer/sebastian/recursion-context@5.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:composer/sebastian/object-reflector@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/recursion-context@5.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/type@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/sebastian/version@4.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/slevomat/coding-standard@8.22.1",
+      "dependsOn": [
+        "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@v1.2.0",
+        "pkg:composer/phpstan/phpdoc-parser@2.3.0",
+        "pkg:composer/squizlabs/php_codesniffer@3.13.5"
+      ]
+    },
+    {
+      "ref": "pkg:composer/spatie/array-to-xml@3.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/squizlabs/php_codesniffer@3.13.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/console@v7.3.6",
+      "dependsOn": [
+        "pkg:composer/symfony/deprecation-contracts@v3.6.0",
+        "pkg:composer/symfony/polyfill-mbstring@v1.33.0",
+        "pkg:composer/symfony/service-contracts@v3.6.1",
+        "pkg:composer/symfony/string@v7.3.4"
+      ]
+    },
+    {
+      "ref": "pkg:composer/symfony/deprecation-contracts@v3.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/filesystem@v7.3.6",
+      "dependsOn": [
+        "pkg:composer/symfony/polyfill-ctype@v1.33.0",
+        "pkg:composer/symfony/polyfill-mbstring@v1.33.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/symfony/polyfill-ctype@v1.33.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/polyfill-intl-grapheme@v1.33.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/polyfill-intl-normalizer@v1.33.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/polyfill-mbstring@v1.33.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/symfony/service-contracts@v3.6.1",
+      "dependsOn": [
+        "pkg:composer/psr/container@2.0.2",
+        "pkg:composer/symfony/deprecation-contracts@v3.6.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/symfony/string@v7.3.4",
+      "dependsOn": [
+        "pkg:composer/symfony/polyfill-ctype@v1.33.0",
+        "pkg:composer/symfony/polyfill-intl-grapheme@v1.33.0",
+        "pkg:composer/symfony/polyfill-intl-normalizer@v1.33.0",
+        "pkg:composer/symfony/polyfill-mbstring@v1.33.0"
+      ]
+    },
+    {
+      "ref": "pkg:composer/theseer/tokenizer@1.3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:composer/vimeo/psalm@6.5.1",
+      "dependsOn": [
+        "pkg:composer/amphp/amp@v3.1.1",
+        "pkg:composer/amphp/byte-stream@v2.1.2",
+        "pkg:composer/amphp/parallel@v2.3.2",
+        "pkg:composer/composer/semver@3.4.4",
+        "pkg:composer/composer/xdebug-handler@3.0.5",
+        "pkg:composer/dnoegel/php-xdg-base-dir@v0.1.1",
+        "pkg:composer/felixfbecker/advanced-json-rpc@v3.2.1",
+        "pkg:composer/felixfbecker/language-server-protocol@v1.5.3",
+        "pkg:composer/fidry/cpu-core-counter@1.3.0",
+        "pkg:composer/netresearch/jsonmapper@v4.5.0",
+        "pkg:composer/nikic/php-parser@v5.6.2",
+        "pkg:composer/sebastian/diff@5.1.1",
+        "pkg:composer/spatie/array-to-xml@3.4.1",
+        "pkg:composer/symfony/console@v7.3.6",
+        "pkg:composer/symfony/filesystem@v7.3.6"
+      ]
+    },
+    {
+      "ref": "pkg:composer/webmozart/assert@1.12.1",
+      "dependsOn": []
+    }
+  ],
+  "annotations": [
+    {
+      "bom-ref": "metadata-annotations",
+      "subjects": [
+        "pkg:composer/mongodb/mongodb"
+      ],
+      "annotator": {
+        "component": {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "11.11.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@11.11.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@11.11.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      },
+      "timestamp": "2025-11-21T02:34:46Z",
+      "text": "This Software Bill-of-Materials (SBOM) document was created on Friday, November 21, 2025 with cdxgen. The data was captured during the build lifecycle phase. The document describes an application named 'mongodb'. There are 77 components. The package type in this SBOM is composer with 28 purl namespaces described under components. The components were identified from the source files: composer.lock."
+    }
+  ]
 }
