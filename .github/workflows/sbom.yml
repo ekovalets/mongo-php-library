@@ -42,7 +42,7 @@ jobs:
         uses: ./.github/actions/setup-sbom
 
       - name: Run SBOM Generator
-        uses: ./.github/actions/auxiliry/sbom-update
+        uses: ./.github/actions/sbom-update
         with:
           php-version: '8.2'
           working-directory: '.'
