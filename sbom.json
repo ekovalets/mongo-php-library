@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:799c3b43-267e-49a6-a45f-6965fa31e4b9",
+  "serialNumber": "urn:uuid:636c60bb-f09e-4edb-a827-736115425160",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-11-21T22:20:50Z",
+    "timestamp": "2025-11-21T22:25:28Z",
     "tools": {
       "components": [
         {
@@ -5638,7 +5638,7 @@
           ]
         }
       },
-      "timestamp": "2025-11-21T22:20:50Z",
+      "timestamp": "2025-11-21T22:25:28Z",
       "text": "This Software Bill-of-Materials (SBOM) document was created on Friday, November 21, 2025 with cdxgen. The data was captured during the build lifecycle phase. The document describes an application named 'mongodb'. There are 77 components. The package type in this SBOM is composer with 28 purl namespaces described under components. The components were identified from the source files: composer.lock."
     }
   ]
