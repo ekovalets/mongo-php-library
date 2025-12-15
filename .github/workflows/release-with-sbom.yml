@@ -1,0 +1,152 @@
+name: "Release New Version"
+run-name: "Release ${{ inputs.version }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The version to be released. This is checked for consistency with the branch name and configuration"
+        required: true
+        type: "string"
+      jira-version-number:
+        description: "JIRA version ID (e.g. 54321)"
+        required: true
+        type: "string"
+
+env:
+  default-release-message: |
+    The PHP team is happy to announce that version {0} of the MongoDB PHP library is now available.
+
+    **Release Highlights**
+
+    TODO: one or more paragraphs describing important changes in this release
+
+    A complete list of resolved issues in this release may be found in [JIRA](https://jira.mongodb.org/secure/ReleaseNote.jspa?version={1}&projectId=12483).
+
+    **Documentation**
+
+    Documentation for this library may be found in the [PHP Library Manual](https://mongodb.com/docs/php-library/current/).
+
+    **Installation**
+
+    This library may be installed or upgraded with:
+    
+      composer require mongodb/mongodb:{0}
+      
+    Installation instructions for the `mongodb` extension may be found in the [PHP.net documentation](https://php.net/manual/en/mongodb.installation.php).
+
+jobs:  
+  prepare-release:
+    environment: release
+    name: "Prepare release"
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+      - name: "Create release output"
+        run: echo '🎬 Release process for version ${{ inputs.version }} started by @${{ github.triggering_actor }}' >> $GITHUB_STEP_SUMMARY
+
+      - name: "Generate token and checkout repository"
+        uses: mongodb-labs/drivers-github-tools/secure-checkout@v2
+        with:
+          app_id: ${{ vars.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: "Store version numbers in env variables"
+        run: |
+          echo RELEASE_VERSION=${{ inputs.version }} >> $GITHUB_ENV
+          echo RELEASE_BRANCH=v$(echo ${{ inputs.version }} | cut -d '.' -f-2) >> $GITHUB_ENV
+
+      - name: "Ensure release tag does not already exist"
+        run: |
+          if [[ $(git tag -l ${RELEASE_VERSION}) == ${RELEASE_VERSION} ]]; then
+            echo '❌ Release failed: tag for version ${{ inputs.version }} already exists' >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+      - name: "Fail if branch names don't match"
+        if: ${{ github.ref_name != env.RELEASE_BRANCH }}
+        run: |
+          echo '❌ Release failed due to branch mismatch: expected ${{ inputs.version }} to be released from ${{ env.RELEASE_BRANCH }}, got ${{ github.ref_name }}' >> $GITHUB_STEP_SUMMARY
+          exit 1
+
+      #
+      # Preliminary checks done - generate SBOM before tagging
+      #
+
+      - name: "Setup PHP environment"
+        id: setup-php
+        uses: ./.github/actions/setup
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          driver-version: ${{ env.DRIVER_VERSION }}
+          working-directory: '.'
+        continue-on-error: true
+
+      - name: "Generate/Update composer.lock"
+        id: composer-lock
+        if: steps.setup-php.outcome == 'success'
+        run: |
+          echo "Resolving dependencies and generating composer.lock..."
+          composer update --lock --no-install --ignore-platform-reqs
+          echo "composer.lock generated with resolved versions"
+        continue-on-error: true
+
+      - name: "Setup SBOM environment"
+        id: setup-sbom
+        if: steps.composer-lock.outcome == 'success'
+        uses: ./.github/actions/setup-sbom
+        continue-on-error: true
+
+      - name: "Generate SBOM"
+        id: generate-sbom
+        if: steps.setup-sbom.outcome == 'success'
+        uses: ./.github/actions/sbom-update
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          working-directory: '.'
+          output-file: ${{ env.SBOM_FILE }}
+          output-format: 'json'
+        continue-on-error: true
+
+      - name: "Check for SBOM changes"
+        id: sbom_status
+        if: steps.generate-sbom.outcome == 'success'
+        run: |
+          JQ_NORMALIZER='del(.serialNumber) | del(.metadata.timestamp) | walk(if type == "object" and .timestamp then .timestamp = "TIMESTAMP_NORMALIZED" else . end)'
+
+          if ! git show HEAD:${{ env.SBOM_FILE }} > /dev/null 2>&1; then
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
+            echo "SBOM file is new"
+            exit 0
+          fi
+
+          if diff -q \
+             <(git show HEAD:${{ env.SBOM_FILE }} | jq -r "$JQ_NORMALIZER") \
+             <(cat ${{ env.SBOM_FILE }} | jq -r "$JQ_NORMALIZER"); then
+            echo "HAS_CHANGES=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in SBOM"
+          else
+            echo "HAS_CHANGES=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in SBOM"
+          fi
+        continue-on-error: true
+
+      - name: "Commit SBOM changes"
+        if: steps.sbom_status.outputs.HAS_CHANGES == 'true'
+        run: |
+          git add ${{ env.SBOM_FILE }}
+          git commit -m "chore: Update SBOM for release ${{ inputs.version }}"
+          git push
+          echo "📦 SBOM updated and committed" >> $GITHUB_STEP_SUMMARY
+        continue-on-error: true
+
+      - name: "Report SBOM status"
+        run: |
+          if [[ "${{ steps.generate-sbom.outcome }}" == "success" ]]; then
+            echo "✅ SBOM generation completed successfully" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ SBOM generation skipped or failed - continuing with release" >> $GITHUB_STEP_SUMMARY
+          fi
