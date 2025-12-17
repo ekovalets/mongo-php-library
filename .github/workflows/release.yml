@@ -124,7 +124,7 @@ jobs:
       - name: "Generate SBOM"
         id: generate-sbom
         if: steps.setup-sbom.outcome == 'success'
-        uses: ./.github/actions/sbom-update
+        uses: ./.github/actions/update-sbom
         with:
           php-version: ${{ env.PHP_VERSION }}
           working-directory: '.'
