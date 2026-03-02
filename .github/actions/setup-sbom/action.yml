@@ -1,0 +1,22 @@
+name: Setup PHP SBOM
+description: Sets up environment for generating SBOM in PHP projects
+inputs:
+  working-directory:
+    description: "The directory where composer.json is located"
+    required: false
+    default: "."
+
+runs:
+  using: composite
+  steps:
+    - name: Install latest Composer
+      shell: bash
+      run: curl -sS https://getcomposer.org/installer | php -- --install-dir=. --filename=composer
+
+    - name: Allow CycloneDX plugin
+      shell: bash
+      run: ./composer config allow-plugins.cyclonedx/cyclonedx-php-composer true
+
+    - name: Install CycloneDX plugin
+      shell: bash
+      run: ./composer require --dev cyclonedx/cyclonedx-php-composer --ignore-platform-reqs
